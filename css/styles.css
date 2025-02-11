@@ -1,0 +1,262 @@
+/* Global Styles */
+/* #region */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ececec;
+    margin: 0px;
+  }
+
+h1 {
+  color: rgb(9, 160, 177);
+  font-size: 35px;
+}
+
+h2 {
+  color: #000;
+  font-size: 25px;
+}
+
+p {
+  font-size: 22px;
+}
+
+li {
+  font-size: 22px;
+  padding: 10px;
+}
+
+.content-box-header-border {
+  border-bottom: 1px solid #00f7ff;
+  width: 100%;
+  margin: auto;
+}
+  
+.section-break {
+  height: 30px;
+  width: 100%;
+  border-bottom: 1px solid #00f7ff;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+}
+
+.sidebar-section-break {
+  height: 30px;
+  width: 90%;
+  border-bottom: 1px solid #00f7ff;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+/* #endregion */
+
+/* sidebar */
+/* #region */
+  .sidebar {
+    margin-bottom: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: auto;
+    width: 400px;
+    position: relative;
+    z-index: 1;
+    background-color: #c6fdfd;
+    overflow-x: hidden;
+    flex-shrink: 0; /* Prevents sidebar from shrinking */
+  }
+
+  .sidebar-information {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: auto;
+    width: 400px;
+    position: relative;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  .sidebar ul {
+    padding: 0px; /* Even padding */
+  }
+
+  .sidebar li {
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(9, 160, 177);
+    display: flex;
+    align-items: center; /* Vertically center items */
+    padding: 10px 16px 16px 16px; /* Even padding */
+    list-style: none; /* Remove default bullet spacing */
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: rgb(9, 160, 177);
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidebar img {
+    margin-top: 0%;
+    position: relative;
+    width: 100%;
+    border-color: #f1f1f1;
+  }
+
+  .sidebar-img-circle {
+    margin-top: -150px; /* Adjusted top margin */
+    position: relative;
+    width: 250px; /* Set width */
+    height: 250px; /* Set height */
+    border-radius: 50%; /* Make the image circular */
+    outline: 4px solid #ffffff; /* Optional border */
+    object-fit: contain; /* Ensures the image covers the circle without distorting */
+    outline-offset: 10px; /* Creates space between the shape and outline */
+    background-color: aqua;
+    background-image: url("../images/profile_picture.jpg");
+    margin-left: auto; /* Centering the image horizontally */
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  
+  .main {
+  margin-right: 11px;
+    font-size: 28px; /* Increased text to enable scrolling */
+    flex-grow: 1; /* Allows the main content to take up remaining space */
+  }
+
+  .sidebar-icon {
+    width: 25px;  /* Force same icon width */
+    height: 25px; /* Ensures all icons are uniform */
+    margin-right: 10px; /* Spacing between icon and text */
+    text-align: center; 
+  }
+  
+  @media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar-information {
+      width: auto;
+    }
+
+    .sidebar {
+        border-radius: 40px;
+        width: 95%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .main {
+        width: 95%;
+        justify-items: center;
+        margin: auto;
+    }
+}
+
+/* #endregion */
+
+/* content boxes */
+/* #region */
+.container {
+  margin-top: 12px;
+  justify-items: center;
+  display: flex; /* Makes sidebar and main content appear side by side */
+  align-items: stretch;
+  gap: 10px; /* Adds spacing between columns */
+  width: 100%;
+}
+
+.content-box {
+  border-radius: 40px;
+  margin-bottom: 10px;
+  position: relative; /* Ensures elements inside are positioned relative to this */
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px;
+}
+
+.content-box-body a {
+  color: rgb(9, 160, 177); /* Match the theme color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+}
+
+.content-box-body a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.content-box-header {
+  border-top-left-radius: 40px;  /* Match content-box's border-radius */
+  border-top-right-radius: 40px;
+  background-color: #adffff;
+  margin: auto;
+  position: relative; /* Allows it to stack above the body */
+  width: auto;
+  height: 80px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content-box-body {
+  position: relative; /* Stacks below the header */
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border-bottom: 80%;
+  border-color: #00f7ff;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content-box-date {
+  font-size: 25px;
+  position: relative; /* Stacks below the header */
+  width: auto;
+  height: auto;
+  background-color: #00f7ff;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 50px;
+  display: inline-block; /* Ensures it behaves like an inline element */
+  margin-left: 0px; /* Optional: Adds space between the <h2> and the date */
+}
+
+.content-box-icon {
+  width: 25px;  /* Force same icon width */
+  height: 25px; /* Ensures all icons are uniform */
+  margin-right: 35px; /* Spacing between icon and text */
+  text-align: center;
+}
+
+.content-box-date-icon {
+  position: relative;
+  padding: 0px 20px 0px 0px;
+}
+
+.in-progress {
+  width: fit-content;
+  padding: 11px;
+  border-radius: 50px;
+  background-color: #adffff;
+  color: rgb(9, 160, 177);
+  position: relative;
+  margin-top: 10px;
+}
+
+.skill-level {
+  color: rgb(9, 160, 177);
+  position: relative;
+  font-size: 25px
+}
+
+/* #endregion */
