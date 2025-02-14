@@ -16,6 +16,13 @@ h2 {
   font-size: 25px;
 }
 
+h3 {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0px;
+}
+
 p {
   font-size: 22px;
 }
@@ -194,16 +201,25 @@ li {
 }
 
 .content-box-header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  gap: 55px; /* Adds spacing between icon and text */
   border-top-left-radius: 40px;  /* Match content-box's border-radius */
   border-top-right-radius: 40px;
   background-color: #adffff;
   margin: auto;
   position: relative; /* Allows it to stack above the body */
   width: auto;
-  height: 80px;
+  height: auto;
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.content-box-icon {
+  width: 10px;
+  font-size: 35px;
+  color: rgb(9, 160, 177);
 }
 
 .content-box-body {
@@ -219,26 +235,21 @@ li {
 }
 
 .content-box-date {
+  display: flex;
+  align-items: center; /* Center vertically */
   font-size: 25px;
   position: relative; /* Stacks below the header */
-  width: auto;
+  width: fit-content;
   height: auto;
   background-color: #00f7ff;
   color: #ffffff;
   padding: 10px;
   border-radius: 50px;
-  display: inline-block; /* Ensures it behaves like an inline element */
   margin-left: 0px; /* Optional: Adds space between the <h2> and the date */
 }
 
-.content-box-icon {
-  width: 25px;  /* Force same icon width */
-  height: 25px; /* Ensures all icons are uniform */
-  margin-right: 35px; /* Spacing between icon and text */
-  text-align: center;
-}
-
 .content-box-date-icon {
+  margin-left: 10px;
   position: relative;
   padding: 0px 20px 0px 0px;
 }
